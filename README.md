@@ -3,7 +3,7 @@ This is a simple code for visual analysis of a neural network which is also know
 
 The idea is to generate an image that maximizes the individual features of the neural network. The image is initialized with a small amount of random noise, and then gradually modified using the gradient of the given feature with respect to the input image.
 
-![demo1](img/githubimg.png)
+![demo1](githubimg.png)
 
 # Dependency
 The code does not work with TensorFlow v.2. The TF version 1.15.0 is used to run the code.
@@ -32,9 +32,9 @@ Each training and test example is assigned to one of the following labels:
 ## Installation and Running
 
 There are two main functions integrated in the ```train.py```.
-*  Model training by running the function ```model(X_train, Y_train, X_test, Y_test)```. The parameters such as the dataset ( X_train, Y_train, X_test, Y_test), learning_rate, num_epochs, and minibatch_size = 60 can be specifed in this function. It will then save the parameters to a ```param.pkl``` file.
+*  Model training by running the function ```model(X_train, Y_train, X_test, Y_test)```. The parameters such as the dataset ( X_train, Y_train, X_test, Y_test), learning rate, number of epochs and minibatch size can be specifed in this function. After training, the parameters (weights) will be saved into to the ```param.pkl``` file.
 
-*  Feature optimization by runing ```model_load_param()```. This functon wil load the previous saved parameterts from the ```param.pkl```  and learn to maximise the feature from this learned parameters. A param.pkl that obtained by training with 1500 epoch are provided in this page.
+*  Feature optimization by runing ```model_load_param()```. This functon wil load the previous saved weights (```param.pkl```)  and learn to maximise the feature from this learned parameters. The param.pkl that obtained by training the model with 1500 epoch are provided in this page.
 
 
 Note that users are expected to modify the corresponding files to correct path to work properly. Enjoy!
